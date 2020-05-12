@@ -6,25 +6,16 @@ import { BrowserRouter as Router,
 } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
+import Search from './components/Search'
+import Saved from './components/Saved'
+
 
 function App() {
   return (
     <Router>
        <div className="App">
 
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/search">About</Link>
-            </li>
-            <li>
-              <Link to="/saved">Users</Link>
-            </li>
-          </ul>
-        </nav>
+     
 
         <Switch>
           <Route path="/search">
@@ -34,7 +25,7 @@ function App() {
             <Saved />
           </Route>
           <Route path="/">
-            <Home />
+            <Search />
           </Route>
         </Switch>
 
